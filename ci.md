@@ -28,3 +28,5 @@
 ### Cache Playwright dependencies
 ✏️ [Cache Playwright dependencies across workflows](https://github.com/jbranchaud/til/blob/master/github-actions/cache-playwright-dependencies-across-workflows.md)
 
+### Sharding tests
+[Playwright docs: Sharding tests](https://playwright.dev/docs/test-sharding)
