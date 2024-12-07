@@ -61,15 +61,13 @@ test('new booking can be fetched by booking ID - with method', async ({
 
 test('new booking response contains booking ID and booking details', async ({
   request,
-}) => {});
+}) => {
+  // TODO:
+});
 
 ///////////////////////////////////////////////////////////////////
 // 1. Add missing test(s)
 // 2. Extract methods createBooking and gettingBookingById
-// 3. (*) Use type Booking for storing booking data, use it in methods
-// 4. (*) Use type NewBookingResponse for storing new booking response data, use it in methods
-// 5. (*) Create BookerApi class to store Booker API methods, pass `request` in class constructor
-// 6. (*) Use BookerApi class as fixture
 
 async function createNewBooking(
   request: APIRequestContext,
@@ -85,18 +83,24 @@ async function createNewBooking(
   return await newBooking.json();
 }
 
-type Booking = {
+// 3. (*) Use type Booking for storing booking data, use it in methods.
+// Move to separate file
+export type Booking = {
   firstname: string;
-  // add rest
+  // TODO: Add more parameters
 };
 
-type NewBookingResponse = {
+// 4. (*) Use type NewBookingResponse for storing new booking response data, use it in methods
+// Move to separate file
+export type NewBookingResponse = {
   bookingid: number;
-  // booking: Booking
+  booking: Booking;
 };
 
-class BookingApi {
-  private readonly baseURL: string = BOOKING_API_URL;
+// 5. (*) Create BookerApi class to store Booker API methods, pass `request` in class constructor
+// Move to separate file
+export class BookingApi {
+  private readonly baseURL: string = 'https://restful-booker.herokuapp.com';
 
   constructor(public readonly request: APIRequestContext) {}
 
@@ -104,3 +108,5 @@ class BookingApi {
   //   async createNewBooking(bookingData: Booking): Promise<NewBookingResponse> {
   //   }
 }
+
+// 6. (*) Use BookerApi class as fixture
