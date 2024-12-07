@@ -20,4 +20,4 @@
 
 📌 [expect.poll](https://playwright.dev/docs/test-assertions#expectpoll)
 
-📌 [expect.toPass](hhttps://playwright.dev/docs/test-assertions#expecttopass)
+📌 [expect.toPass](https://playwright.dev/docs/test-assertions#expecttopass)
