@@ -24,5 +24,8 @@
     "globals": "15.12.0",
     "prettier": "3.4.1",
     "typescript-eslint": "8.16.0"
+  },
+  "dependencies": {
+    "playwright-workshops-2024": "file:"
   }
 }
